@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Teacher</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🎓 Admin Portal</a>
+            <nav class="nav-links">
+                <a href="/adminDashboard.html" class="nav-link">Dashboard</a>
+                <a href="/createAdmin.html" class="nav-link">Manage Admins</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-section" style="max-width: 500px; margin: 2rem auto;">
+            <!-- Create Teacher Card -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fas fa-chalkboard-teacher"></i> Create Teacher Account
+                    </h2>
+                </div>
+                <form id="createTeacherForm" class="form-grid">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Teacher Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="teacherId" placeholder="Teacher ID (optional)">
+                    </div>
+                    <button type="submit">
+                        <i class="fas fa-plus-circle"></i> Create Teacher
+                    </button>
+                </form>
+                <div id="createMessage" class="message"></div>
+            </div>
+
+            <!-- Change Password Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fas fa-key"></i> Change Teacher Password
+                    </h2>
+                </div>
+                <form id="changePasswordForm" class="form-grid">
+                    <div class="form-group">
+                        <input type="email" id="teacherEmailChange" placeholder="Teacher Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="currentPassword" placeholder="Current Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="newPassword" placeholder="New Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" placeholder="Confirm New Password" required>
+                    </div>
+                    <button type="submit">
+                        <i class="fas fa-save"></i> Change Password
+                    </button>
+                </form>
+                <div id="changeMessage" class="message"></div>
+                <p style="margin-top: 1rem; text-align: center;">
+                    <a href="/adminDashboard.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="nav-header" style="margin-top: 2rem;">
+        <div class="nav-container">
+            <p>&copy; 2025 Admin Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/createTeacher.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🎓 Admin Portal</a>
+            <nav class="nav-links">
+                <a href="/adminDashboard.html" class="nav-link">Dashboard</a>
+                <a href="/createAdmin.html" class="nav-link">Manage Admins</a>
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-grid">
+            <div>
+                <!-- User Management Section -->
+                <div class="dashboard-section">
+                    <h2>User Management</h2>
+                    <div class="inline-actions">
+                        <button onclick="window.location.href='/createTeacher.html'">Create Teacher</button>
+                        <button onclick="window.location.href='/createStudent.html'">Create Student</button>
+                        <button onclick="window.location.href='/createAdmin.html'">Create Admin</button>
+                    </div>
+
+                    <div id="createTeacherContainer" style="display:none; margin-top:12px;">
+                        <h3>Create Teacher</h3>
+                        <form id="createTeacherInlineForm" class="form-grid">
+                            <input type="email" id="teacherEmailInline" placeholder="Teacher Email" required class="full-width">
+                            <input type="password" id="teacherPasswordInline" placeholder="Password" required class="full-width">
+                            <input type="text" id="teacherIdInline" placeholder="Teacher ID (optional)" class="full-width">
+                            <button type="submit">Create Teacher</button>
+                        </form>
+                        <div id="teacherInlineMessage" class="message"></div>
+                    </div>
+
+                    <div id="createStudentContainer" style="display:none; margin-top:12px;">
+                        <h3>Create Student</h3>
+                        <form id="createStudentInlineForm" class="form-grid">
+                            <input type="email" id="studentEmailInline" placeholder="Student Email" required class="full-width">
+                            <input type="password" id="studentPasswordInline" placeholder="Password" required class="full-width">
+                            <input type="text" id="studentIdInline" placeholder="Student ID (optional)" class="full-width">
+                            <button type="submit">Create Student</button>
+                        </form>
+                        <div id="studentInlineMessage" class="message"></div>
+                    </div>
+                </div>
+            </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="/adminDashboard.js"></script>
+</body>
+</html>
